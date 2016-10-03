@@ -17,7 +17,11 @@ But email is never as easy it seems. These are a few battle-tested tricks we hav
 Mailpack is a meta-package of existing gems:
 
 * [premailer](https://github.com/premailer/premailer) via [premailer-rails](https://github.com/fphilipe/premailer-rails)
-* markerb
+* [Markerb](https://github.com/plataformatec/markerb)
+
+### Markerb
+
+> Markerb allows you to render multipart e-mails from a single template. The template is written in Markdown, which is delivered as a text part, but also rendered and delivered as an HTML part.
 
 ### Premailer
 
