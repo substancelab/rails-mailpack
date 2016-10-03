@@ -40,6 +40,14 @@ They support the following content blocks:
 * `call_to_action`: Use this to output a big button with a link below the primary content of the email.
 * `below_call_to_action`: Use this to insert extra content below the call to action. Usually less important stuff, like legal rambles or explanations of the preceding content.
 
+To style your email create an `app/assets/stylesheets/application_mailer.sass` (or however you prefer styling). Include the file into your email HTML layout:
+
+    <%= stylesheet_link_tag "application_mailer" %>
+
+This causes the styles from the stylesheet to be inserted as inline styles in the rendered email.
+
+We've included a sample stylesheet in `lib/templates/application_mailer.sass`, based on tested and hardened styles built by [Litmus](https://litmus.com/resources/free-responsive-email-templates).
+
 ## What's included in the box
 
 Mailpack stands on the shoulders of giants:
