@@ -14,7 +14,7 @@ But email is never as easy it seems. These are a few battle-tested tricks we hav
 
 ## What's included in the box
 
-Mailpack is a meta-package of existing gems:
+Mailpack stands on the shoulders of giants:
 
 * [premailer](https://github.com/premailer/premailer) via [premailer-rails](https://github.com/fphilipe/premailer-rails)
 * [Markerb](https://github.com/plataformatec/markerb)
@@ -45,6 +45,13 @@ And then execute:
 Or install it yourself as:
 
     $ gem install rails-mailpack
+
+### To convert HTML links to a pretty text version
+
+Add an initializer:
+
+    ActionMailer::Base.register_interceptor HtmlLinksToTextInterceptor
+    ActionMailer::Base.register_preview_interceptor HtmlLinksToTextInterceptor
 
 ## Development
 
