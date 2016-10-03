@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Rails::Mailpack</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<%= stylesheet_link_tag "application_mailer" %>
+</head>
+<body style="margin: 0; padding: 0;">
+
+<%# HEADER %>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td bgcolor="#ffffff" align="center">
+      <%# HIDDEN PREHEADER TEXT %>
+      <%- if content_for?(:preheader_text) -%>
+        <div class="preheader-text">
+          <%= content_for :preheader_text -%>
+        </div>
+      <%- end -%>
+      <table border="0" cellpadding="0" cellspacing="0" width="500" class="wrapper">
+        <%# LOGO/PREHEADER TEXT %>
+        <tr>
+          <td class="logo" align="center">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td bgcolor="#ffffff" width="100" align="center"><%= image_tag("logo.png", :alt => "Your logo from the asset pipeline", :width => "32", :height => "32", :style => "display: block;", :border => "0") %></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<%# ONE COLUMN SECTION %>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td bgcolor="#ffffff" align="center" class="section-padding">
+      <table border="0" cellpadding="0" cellspacing="0" width="500" class="responsive-table">
+        <tr>
+          <td>
+            <%= yield %>
+          </td>
+        </tr>
+        <%- if content_for?(:call_to_action) -%>
+          <tr>
+              <td align="center">
+                  <%# CALL TO ACTION %>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mobile-button-container">
+                      <tr>
+                          <td align="center" class="call-to-action padding-copy">
+                              <table border="0" cellspacing="0" cellpadding="0" class="responsive-table">
+                                  <tr>
+                                      <td align="center"><%= content_for(:call_to_action) %></td>
+                                  </tr>
+                              </table>
+                          </td>
+                      </tr>
+                  </table>
+              </td>
+          </tr>
+        <%- end -%>
+        <%- if content_for?(:below_call_to_action) -%>
+          <tr>
+            <td>
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td align="left" class="note padding-copy"><%= content_for(:below_call_to_action) %></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        <%- end -%>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<%# FOOTER %>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td bgcolor="#ffffff" align="center">
+      <table border="0" cellspacing="0" cellpadding="0" width="100%" align="center">
+        <tr>
+          <td class="footer-padding" align="center">
+            <table width="500" border="0" cellspacing="0" cellpadding="0" align="center" class="responsive-table">
+              <tr>
+                <td align="center" class="footer-copy">
+                  <span class="appleFooter" style="color:#666666;">Footer content goes here, perhaps unsubscribe information?</span>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

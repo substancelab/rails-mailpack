@@ -1,0 +1,5 @@
+<%= yield -%>
+
+<%- if content_for?(:call_to_action) %><%= content_for(:call_to_action) %><% end %>
+
+<%- if content_for?(:below_call_to_action) %><%= content_for(:below_call_to_action) %><% end %>
