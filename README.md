@@ -16,8 +16,15 @@ But email is never as easy it seems. These are a few battle-tested tricks we hav
 
 Mailpack is a meta-package of existing gems:
 
-* premailer-rails
+* [premailer](https://github.com/premailer/premailer) via [premailer-rails](https://github.com/fphilipe/premailer-rails)
 * markerb
+
+### Premailer
+
+* CSS styles are converted to inline style attributes
+* Relative paths are converted to absolute paths
+* CSS properties are checked against e-mail client capabilities
+* A plain text version is created (optional)
 
 ## Installation
 
