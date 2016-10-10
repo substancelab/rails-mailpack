@@ -71,7 +71,7 @@ Mailpack stands on the shoulders of giants:
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'rails-mailpack'
+gem "rails-mailpack", :require => false
 ```
 
 And then execute:
@@ -86,8 +86,7 @@ Or install it yourself as:
 
 Add an initializer:
 
-    ActionMailer::Base.register_interceptor HtmlLinksToTextInterceptor
-    ActionMailer::Base.register_preview_interceptor HtmlLinksToTextInterceptor
+    require "rails/mailpack/all"
 
 ## Development
 
