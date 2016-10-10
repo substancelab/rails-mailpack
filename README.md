@@ -87,8 +87,6 @@ Or install it yourself as:
 Add an initializer:
 
     require "rails/mailpack/all"
-    ActionMailer::Base.register_interceptor HtmlLinksToTextInterceptor
-    ActionMailer::Base.register_preview_interceptor HtmlLinksToTextInterceptor
 
 ## Development
 
