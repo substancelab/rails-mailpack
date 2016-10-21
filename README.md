@@ -100,6 +100,16 @@ Add an initializer:
 
     require "rails/mailpack/all"
 
+### To use a stylesheet from the asset pipeline
+
+You need to precompile the stylesheet on its own. If your stylesheet is named `application_mailer.css` add
+
+```ruby
+Rails.application.config.assets.precompile += %w( application_mailer.css )
+```
+
+to `config/initializers/assets.rb` and restart your server
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
