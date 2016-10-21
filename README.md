@@ -74,6 +74,18 @@ Add this line to your application's Gemfile:
 gem "rails-mailpack", :require => false
 ```
 
+If you want to write your mailer templates using Markdown, you should choose a Markdown engine as well. Both Redcarpet and Kramdown are supported, and you can add either one to your Gemfile:
+
+```ruby
+gem "kramdown"
+```
+
+or
+
+```ruby
+gem "redcarpet"
+```
+
 And then execute:
 
     $ bundle
