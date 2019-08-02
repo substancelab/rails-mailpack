@@ -2,7 +2,7 @@
 
 require "minitest/autorun"
 
-require_relative "../lib/html_link_to_text_interceptor"
+require_relative "../lib/html_links_to_text_interceptor"
 
 class HtmlLinksToTextInterceptorTest < Minitest::Test
   def test_it_explodes_links_into_a_textual_representation
